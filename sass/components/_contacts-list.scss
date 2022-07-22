@@ -1,0 +1,24 @@
+.contacts-list {
+    @extend %list;
+    display: flex;
+    margin-left: auto;
+}
+
+.contacts-list__item {
+    @extend %header-items;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.contacts-list__link {
+    @extend %link;
+    @include centeredFlex;
+    padding: 32px 0;
+}
+
+.contacts-list__icon {
+    margin-right: 10px;
+    fill: currentColor;
+}

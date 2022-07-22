@@ -1,0 +1,107 @@
+.user-form {
+    width: 448px;
+}
+
+.user-form__title {
+    margin-bottom: 12px;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+
+    color: getColor('text-accent');
+}
+
+.user-form__field {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.user-form__field--comment {
+    margin-bottom: 20px;
+}
+
+.user-form__label {
+    margin-bottom: 4px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: getLetterSpacing('form');
+}
+
+.user-form__input-box {
+    position: relative;
+    color: getColor('text-accent');
+    transition: color $duration $cubic-bezier;
+
+    &:hover,
+    .user-form__label:hover + & {
+        color: getColor('button');
+    }
+}
+
+%form-text {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    padding-left: 42px;
+
+    color: getColor('text-accent');
+
+    border: 1px solid getColor('border-input');
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    transition: border-color $duration $cubic-bezier,
+    outline $duration $cubic-bezier;
+
+    &:hover,
+    &:focus {
+        border-color: getColor('button');
+        outline: 1px solid getColor('button');
+    }
+}
+
+.user-form__input {
+    @extend %form-text;
+}
+
+.user-form__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    display: inline-block;
+
+    fill: currentColor;
+
+    transform: translateY(-50%);
+    
+    transition: color $duration $cubic-bezier;
+
+    .user-form__input:hover + &,
+    .user-form__input:focus + & {
+        color: getColor('button');
+    }
+}
+
+.user-form__comment {
+    @extend %form-text;
+    padding: 12px 16px;
+    resize: none;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: getLetterSpacing('form');
+
+    &::placeholder {
+        color: getColor('placeholder');
+    }
+}

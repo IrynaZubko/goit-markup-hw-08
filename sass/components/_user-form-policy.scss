@@ -1,0 +1,42 @@
+.user-form-policy {
+    @include centeredFlex;
+    margin-bottom: 30px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+}
+
+.user-form-policy__checkbox {
+    @extend %visually-hidden;
+}
+
+.user-form-policy__icon-box {
+    position: relative;
+    margin-right: 7px;
+
+    width: 16px;
+    height: 15px;
+
+    border: 2px solid getColor('text-accent');
+    border-radius: 4px;
+
+    transition: background-color $duration $cubic-bezier,
+    border-color $duration $cubic-bezier;
+
+    .user-form-policy__checkbox:checked + & {
+        background-color: getColor('button');
+        border-color: getColor('button');
+    }
+}
+
+.user-form-policy__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.user-form-policy__link {
+    color: getColor('button');
+}

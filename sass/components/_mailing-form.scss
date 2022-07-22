@@ -1,0 +1,41 @@
+.mailing-form {
+    margin-left: auto;
+}
+
+.mailing-form__label {
+    @extend %footer-title;
+}
+
+.mailing-form__send-block {
+    display: flex;
+    flex-direction: row;
+}
+
+.mailing-form__input {
+    padding: 0 0 0 16px;
+    margin-right: 12px;
+    width: 358px;
+    height: 50px;
+
+    color: getColor('primary-white');
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    
+    border-width: 1px;
+    border-style: solid;
+    border-color: getColor('border-send');
+    border-radius: 4px;
+
+    filter: drop-shadow(0px 4px 4px getColor('shadow'));
+
+    background-color: transparent;
+
+    &:focus {
+        outline: 1px solid getColor('primary-white');
+    }
+
+    &::placeholder {
+        color: getColor('contacts');
+    }
+}

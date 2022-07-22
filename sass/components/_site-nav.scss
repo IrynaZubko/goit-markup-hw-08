@@ -1,0 +1,42 @@
+.site-nav {
+    @include centeredFlex;
+}
+
+.site-nav__list {
+    @extend %list;
+    display: flex;
+    margin-left: 93px;
+}
+
+.site-nav__item {
+    @extend %header-items;
+    color: getColor('text-accent');
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.site-nav__item--current {
+    color: getColor('button');
+}
+
+.site-nav__link {
+    @extend %link;
+    padding: 32px 0;
+    position: relative;
+
+    .site-nav__item--current &::after{
+        content: "";
+        
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: getColor('button');
+        border-radius: 2px;
+    }
+}

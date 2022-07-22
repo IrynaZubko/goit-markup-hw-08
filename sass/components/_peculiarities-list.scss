@@ -1,0 +1,37 @@
+.peculiarities-list {
+    @include centeredFlex;
+    @extend %list;
+}
+
+.peculiarities-list__item {
+    $margin: 30px;
+    flex-basis: calc((100% - $margin * 3) / 4);
+
+    &:not(:last-child) {
+            margin-right: $margin;
+        }
+}
+
+.peculiarities-list__icon {
+    @include centeredFlex;
+    margin-bottom: 30px;
+    width: 270px;
+    height: 120px;
+
+    background-color: getColor('bg-accent');
+}
+
+.peculiarities-list__title {
+    @extend %title;
+    margin-bottom: 10px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+}
+
+.peculiarities-list__text {
+    font-size: 14px;
+    line-height: 1.71;
+}

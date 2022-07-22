@@ -1,0 +1,44 @@
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 40px;
+
+    border-radius: 4px;
+
+    background-color: getColor('primary-white');
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform $duration $cubic-bezier;
+
+    .backdrop--is-hidden & {
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+}
+
+.modal-close-button {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid getColor('bg-backdrop');
+    border-radius: 50%;
+    background-color: inherit;
+    cursor: pointer;
+
+    transition: color $duration $cubic-bezier;
+
+    &:hover,
+    &:focus {
+        color: getColor('button');
+    }
+}
+
+.modal-close-button__icon {
+    @include centeredFlex;
+    fill: currentColor;
+}

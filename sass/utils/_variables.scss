@@ -1,0 +1,45 @@
+$colors: (
+    'primary-white': #FFFFFF,
+    'button': #2196F3,
+    'button-accent': #188CE8,
+    'icon-primary': #AFB1B8,
+    'shadow': rgba(0, 0, 0, 0.15),
+    // border colors
+    'border': #ECECEC,
+    'border-card': #EEEEEE,
+    'border-send': rgba(255, 255, 255, 0.3),
+    'border-input': rgba(33, 33, 33, 0.2),
+    // text colors
+    'text-main': #757575,
+    'text-accent': #212121,
+    'logo': #000000,
+    'contacts': rgba(255, 255, 255, 0.6),
+    'placeholder': rgba(117, 117, 117, 0.5),
+    // background colors
+    'bg-accent': #F5F4FA,
+    'bg-second': #2F303A,
+    'bg-hero': rgba(47, 48, 58, 0.4),
+    'bg-icon-accent': rgba(255, 255, 255, 0.1),
+    'bg-backdrop': rgba(0, 0, 0, 0.1),
+    'bg-card': rgba(47, 48, 58, 0.8),
+    'bg-portfolio-card': rgba(33, 150, 243, 0.9),
+);
+
+@function getColor($key) {
+    @return map-get($colors, $key);
+}
+
+$letter-spacings: (
+    'main': 0.03em,
+    'accent': 0.02em,
+    'second': 0.06em,
+    'form': 0.01em,
+);
+
+@function getLetterSpacing($key) {
+    @return map-get($letter-spacings, $key);
+}
+
+$cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+
+$duration: 250ms;

@@ -1,0 +1,29 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: getColor('primary-white');
+    color: getColor('text-main');
+
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: getLetterSpacing('main');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}

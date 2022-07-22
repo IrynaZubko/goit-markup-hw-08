@@ -1,0 +1,41 @@
+.regular-costumers-list {
+    @include centeredFlex;
+    @extend %list;
+}
+
+.regular-costumers-list__item {
+    width: 170px;
+    height: 92px;
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+.regular-costumers-list__link {
+    @include centeredFlex($type: inline-flex);
+    width: 100%;
+    height: 100%;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: getColor('border-costumers');
+
+    color: getColor('icon-primary');
+    transition: color $duration $cubic-bezier,
+    border-color $duration $cubic-bezier;
+
+    &:hover,
+    &:focus {
+        color: getColor('button');
+        border-color: getColor('button');
+    }
+}
+
+.regular-costumers-list__icon {
+    fill: currentColor;
+}
+
+.regular-costumers-list__descr--visually-hidden {
+    @extend %visually-hidden;
+}

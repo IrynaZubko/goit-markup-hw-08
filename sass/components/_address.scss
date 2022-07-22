@@ -1,0 +1,28 @@
+.address {
+    margin-right: 70px;
+}
+
+.address__contacts {
+    font-style: normal;
+}
+
+.address__list {
+    @extend %list;
+}
+
+.address__item {
+    &:not(:last-child) {
+        margin-bottom: 9px;
+    }
+}
+
+.address__link {
+    @extend %link;
+    font-size: 14px;
+    line-height: 1.71;
+    color: getColor('primary-white');
+}
+
+.address__link--transparency {
+    color: getColor('contacts');
+}
