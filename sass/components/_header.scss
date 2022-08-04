@@ -6,3 +6,9 @@
 .container {
     @extend %container;
 }
+
+.container--centered {
+    @media screen and (min-width: $tablet) {
+        @include centeredFlex;
+    }
+}

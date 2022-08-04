@@ -2,9 +2,16 @@
     @extend %list;
 
     @media screen and (max-width: calc($tablet - 1px)) {
-        display: flex;
-        flex-direction: column-reverse;
-        margin-top: auto;
+        display: none;
+
+        .menu-container--is-open & {
+            display: block;
+            margin-top: auto;
+        }
+    }
+
+    @media screen and (min-width: $tablet) {
+        margin-left: auto;
     }
 
     @media screen and (min-width: $desktop) {
@@ -19,11 +26,11 @@
 
     @media screen and (max-width: calc($tablet - 1px)) {
         &:first-child {
-            margin-bottom: 64px;
+            margin-bottom: 32px;
         }
 
         &:last-child {
-            margin-bottom: 32px;
+            margin-bottom: 64px;
         }
     }
 
@@ -63,7 +70,7 @@
     }
 
     @media screen and (min-width: $desktop) {
-        @include centeredFlex;
+        justify-content: center;
         padding: 32px 0;
     }
 }

@@ -1,11 +1,9 @@
 .site-nav {
+    display: flex;
+    align-items: center;
+
     @media screen and (max-width: calc($tablet - 1px)) {
-        @include centeredFlex($justify-content: space-between);
+        justify-content: space-between;
         padding: 10px 0;
-    }
-    
-    @media screen and (min-width: $tablet) {
-        display: flex;
-        align-items: center;
     }
 }

@@ -2,10 +2,6 @@
     display: flex;
     flex-wrap: wrap;
     @extend %list;
-
-    @media screen and (min-width: $tablet) {
-        display: none;
-    }
 }
 
 .menu-social-links__item {
