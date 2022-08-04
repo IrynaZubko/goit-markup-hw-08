@@ -6,6 +6,20 @@
 }
 
 .footer__container {
-    display: flex;
-    align-items: baseline;
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        align-items: baseline;
+    }
+}
+
+.footer__box {
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        align-items: baseline;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
+        justify-content: space-around;
+        margin-bottom: 60px;
+    }
 }

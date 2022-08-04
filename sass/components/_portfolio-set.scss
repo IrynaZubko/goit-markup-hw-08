@@ -2,15 +2,40 @@
     @extend %list;
     display: flex;
     flex-wrap: wrap;
-    margin-left: -30px;
-    margin-top: -30px;
+
+    @media screen and (min-width: $tablet) {
+        margin-left: -30px;
+        margin-top: -30px;
+    }
+
+    @media screen and (max-width: calc($desktop - 1px)) {
+        max-width: $tablet;
+    }
 }
 
 .portfolio-card {
-    flex-basis: 370px;
-   
-    margin-left: 30px;
-    margin-top: 30px;
+    $margin: 30px;
+
+    @media screen and (max-width: calc($tablet - 1px)) {
+        width: 100%;
+        max-width: $mobile;
+
+        &:not(:last-child) {
+            margin-bottom: $margin;
+        }
+    }
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-basis: calc((100% - $margin * 2) / 2);
+
+        margin-left: $margin;
+        margin-top: $margin;
+    }
+
+    @media screen and (min-width: $desktop) {
+        flex-basis: calc((100% - $margin * 3) / 3);
+    }
 }
 
 .portfolio-card__link {

@@ -1,5 +1,15 @@
 .address {
-    margin-right: 70px;
+    @media screen and (max-width: calc($tablet - 1px)) {
+        margin-bottom: 60px;
+    }
+
+    @media screen and (max-width: calc($desktop - 1px)) {
+        text-align: center;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-right: 70px;
+    }
 }
 
 .address__contacts {
@@ -12,7 +22,13 @@
 
 .address__item {
     &:not(:last-child) {
-        margin-bottom: 9px;
+        margin-bottom: 8px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        &:not(:last-child) {
+            margin-bottom: 9px;
+        }
     }
 }
 

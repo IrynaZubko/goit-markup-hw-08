@@ -1,7 +1,7 @@
 .hero {
-    padding: 200px 0;
-    max-width: 1600px;
-    height: 600px;
+    padding: 118px 0;
+    max-width: 480px;
+    height: 400px;
     margin-left: auto;
     margin-right: auto;
 
@@ -14,22 +14,95 @@
             getColor('bg-hero'),
             getColor('bg-hero')
             ),
-        url(../images/hero.jpg);
+        url(../images/hero-480.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/hero-480@2x.jpg);
+    }
+
+    @media (min-device-pixel-ratio: 3),
+        (min-resolution: 288dpi),
+        (min-resolution: 3dppx) {
+            background-image: url(../images/hero-480@3x.jpg);
+    }
+}
+
+@media screen and (min-width: $tablet) {
+    .hero {
+        padding: 118px 0;
+        max-width: $tablet;
+        height: 400px;
+        background-image: url(../images/hero-768.jpg);
+    }
+
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            .hero {
+                background-image: url(../images/hero-768@2x.jpg);
+            }
+    }
+
+    @media (min-device-pixel-ratio: 3),
+        (min-resolution: 288dpi),
+        (min-resolution: 3dppx) {
+            .hero {
+                background-image: url(../images/hero-768@3x.jpg);
+            }
+    }
+}
+
+@media screen and (min-width: $desktop) {
+    .hero {
+        padding: 200px 0;
+        max-width: 1600px;
+        height: 600px;
+        background-image: url(../images/hero-1200.jpg);
+    }
+
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            .hero {
+                background-image: url(../images/hero-1200@2x.jpg);
+            }
+    }
+
+    @media (min-device-pixel-ratio: 3),
+        (min-resolution: 288dpi),
+        (min-resolution: 3dppx) {
+            .hero {
+                background-image: url(../images/hero-1200@3x.jpg);
+            }
+    }
 }
 
 .hero__title {
     box-sizing: content-box;
-    width: 696px;
     margin: 0 auto 30px;
 
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.62;
     letter-spacing: getLetterSpacing('second');
     text-transform: uppercase;
 
     color: getColor('primary-white');
+
+    @media screen and (min-width: $tablet) {
+        width: 360px;
+        font-size: 26px;
+        line-height: 1.62;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 696px;
+        font-size: 44px;
+        line-height: 1.36;
+    }
 }

@@ -15,41 +15,70 @@
     <title>Портфолио</title>
 </head>
 
-<body class="body">
+<body>
     <!-- Header -->
     <header class="header">
-        <div class="container container--centered">
+        <div class="container">
             <!-- navigation -->
             <nav class="site-nav">
                 <!-- logo -->
                 <a href="./index.html" lang="en" class="logo-link">Web<span class="logo-link__text">Studio</span></a>
-                <!-- navigation list -->
-                <ul class="site-nav__list">
-                    <li class="site-nav__item"><a href="./index.html"
-                            class="site-nav__link">Студия</a></li>
-                    <li class="site-nav__item site-nav__item--current"><a href="./portfolio.html" class="site-nav__link">Портфолио</a></li>
-                    <li class="site-nav__item"><a href="#contacts" class="site-nav__link">Контакты</a></li>
-                </ul>
+                <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container"
+                    data-menu-button>
+                    <svg class="menu-button__icon" width="40" height="40" aria-label="Переключатель мобильного меню">
+                        <use class="menu-button__icon-cross" href="./images/icons.svg#icon-close-menu-button"></use>
+                        <use class="menu-button__icon-menu" href="./images/icons.svg#icon-menu"></use>
+                    </svg>
+                </button>
+                <div class="menu-container" id="menu-container" data-menu>
+                    <!-- navigation list -->
+                    <ul class="site-nav-list">
+                        <li class="site-nav-list__item"><a href="./index.html"
+                                class="site-nav-list__link">Студия</a></li>
+                        <li class="site-nav-list__item site-nav-list__item--current"><a href="./portfolio.html" class="site-nav-list__link">Портфолио</a>
+                        </li>
+                        <li class="site-nav-list__item"><a href="#contacts" class="site-nav-list__link">Контакты</a></li>
+                    </ul>
+                    <!-- contacts list -->
+                    <ul class="contacts-list">
+                        <li class="contacts-list__item">
+                            <a href="mailto:info@devstudio.com" class="contacts-list__link">
+                                <svg class="contacts-list__icon" width="16" height="12">
+                                    <use href="./images/icons.svg#icon-envelope"></use>
+                                </svg>
+                                info@devstudio.com
+                            </a>
+                        </li>
+                        <li class="contacts-list__item contacts-list__item--active">
+                            <a href="tel:+380961111111" class="contacts-list__link">
+                                <svg class="contacts-list__icon" width="10" height="16">
+                                    <use href="./images/icons.svg#icon-smartphone"></use>
+                                </svg>
+                                +38 096 111 11 11
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- social links list -->
+                    <ul class="menu-social-links">
+                        <li class="menu-social-links__item">
+                            <a href="https://www.instagram.com" target="_blank" rel="noreferrer noopener nofollow"
+                                class="menu-social-links__link" lang="en">Instagram</a>
+                        </li>
+                        <li class="menu-social-links__item">
+                            <a href="https://www.instagram.com" target="_blank" rel="noreferrer noopener nofollow"
+                                class="menu-social-links__link" lang="en">Twitter</a>
+                        </li>
+                        <li class="menu-social-links__item">
+                            <a href="https://www.instagram.com" target="_blank" rel="noreferrer noopener nofollow"
+                                class="menu-social-links__link" lang="en">Facebook</a>
+                        </li>
+                        <li class="menu-social-links__item">
+                            <a href="https://www.instagram.com" target="_blank" rel="noreferrer noopener nofollow"
+                                class="menu-social-links__link" lang="en">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
-            <!-- contacts list -->
-            <ul class="contacts-list">
-                <li class="contacts-list__item">
-                    <a href="mailto:info@devstudio.com" class="contacts-list__link">
-                        <svg class="contacts-list__icon" width="16" height="12">
-                            <use href="./images/icons.svg#icon-envelope"></use>
-                        </svg>
-                        info@devstudio.com
-                    </a>
-                </li>
-                <li class="contacts-list__item">
-                    <a href="tel:+380961111111" class="contacts-list__link">
-                        <svg class="contacts-list__icon" width="10" height="16">
-                            <use href="./images/icons.svg#icon-smartphone"></use>
-                        </svg>
-                        +38 096 111 11 11
-                    </a>
-                </li>
-            </ul>
         </div>
     </header>
 
@@ -71,7 +100,36 @@
                     <li class="portfolio-card">
                         <a href="" class="portfolio-card__link">
                             <div class="portfolio-card__image-box">
-                                <img src="./images/technoquack.jpg" alt="Веб-сайт" width="370" class="portfolio-card__image">
+                                <picture>
+                                    <source
+                                        srcset=
+                                            "./images/technoquack-450.webp 450w,
+                                            ./images/technoquack-450@2x.webp 900w,
+                                            ./images/technoquack-450@3x.webp 1350w,
+                                            ./images/technoquack-354.webp 354w,
+                                            ./images/technoquack-354@2x.webp 708w,
+                                            ./images/technoquack-354@3x.webp 1062w,
+                                            ./images/technoquack-370.webp 370w,
+                                            ./images/technoquack-370@2x.webp 740w,
+                                            ./images/technoquack-370@3x.webp 1110w"
+                                        type="image/webp"
+                                        sizes="(min-width: 1200px) 30.83vw, (min-width: 768px) 46vw, (min-width: 480px) 93vw, 100vw">
+                                    <img
+                                        srcset=
+                                            "./images/technoquack-450.jpg 450w,
+                                            ./images/technoquack-450@2x.jpg 900w,
+                                            ./images/technoquack-450@3x.jpg 1350w,
+                                            ./images/technoquack-354.jpg 354w,
+                                            ./images/technoquack-354@2x.jpg 708w,
+                                            ./images/technoquack-354@3x.jpg 1062w,
+                                            ./images/technoquack-370.jpg 370w,
+                                            ./images/technoquack-370@2x.jpg 740w,
+                                            ./images/technoquack-370@3x.jpg 1110w"
+                                        src="./images/technoquack-370.jpg"
+                                        alt="Веб-сайт"
+                                        class="portfolio-card__image"
+                                        sizes="(min-width: 1200px) 30.83vw, (min-width: 768px) 46vw, (min-width: 480px) 93vw, 100vw">
+                                </picture>
                                 <p class="portfolio-card__description">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
                                     получить исчерпывающие сведения о компании или частном лице.
@@ -87,7 +145,36 @@
                     <li class="portfolio-card">
                         <a href="" class="portfolio-card__link">
                             <div class="portfolio-card__image-box">
-                                <img src="./images/basketballplayers.jpg" alt="Два баскетболиста" width="370" class="portfolio-card__image">
+                                <picture>
+                                    <source
+                                        srcset=
+                                            "./images/basketballplayers-450.webp 450w,
+                                            ./images/basketballplayers-450@2x.webp 900w,
+                                            ./images/basketballplayers-450@3x.webp 1350w,
+                                            ./images/basketballplayers-354.webp 354w,
+                                            ./images/basketballplayers-354@2x.webp 708w,
+                                            ./images/basketballplayers-354@3x.webp 1062w,
+                                            ./images/basketballplayers-370.webp 370w,
+                                            ./images/basketballplayers-370@2x.webp 740w,
+                                            ./images/basketballplayers-370@3x.webp 1110w"
+                                        type="image/webp"
+                                        sizes="(min-width: 1200px) 30.83vw, (min-width: 768px) 46vw, (min-width: 480px) 93vw, 100vw">
+                                    <img
+                                        srcset=
+                                            "./images/basketballplayers-450.jpg 450w,
+                                            ./images/basketballplayers-450@2x.jpg 900w,
+                                            ./images/basketballplayers-450@3x.jpg 1350w,
+                                            ./images/basketballplayers-354.jpg 354w,
+                                            ./images/basketballplayers-354@2x.jpg 708w,
+                                            ./images/basketballplayers-354@3x.jpg 1062w,
+                                            ./images/basketballplayers-370.jpg 370w,
+                                            ./images/basketballplayers-370@2x.jpg 740w,
+                                            ./images/basketballplayers-370@3x.jpg 1110w"
+                                        src="./images/basketballplayers-370.jpg"
+                                        alt="Два баскетболиста"
+                                        class="portfolio-card__image"
+                                        sizes="(min-width: 1200px) 30.83vw, (min-width: 768px) 46vw, (min-width: 480px) 93vw, 100vw">
+                                </picture>
                                 <p class="portfolio-card__description">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
                                     получить исчерпывающие сведения о компании или частном лице.
@@ -103,7 +190,36 @@
                     <li class="portfolio-card">
                         <a href="" class="portfolio-card__link">
                             <div class="portfolio-card__image-box">
-                                <img src="./images/restaurant.jpg" alt="Логотип ресторана" width="370" class="portfolio-card__image">
+                                <picture>
+                                    <source
+                                        srcset=
+                                            "./images/restaurant-450.webp 450w,
+                                            ./images/restaurant-450@2x.webp 900w,
+                                            ./images/restaurant-450@3x.webp 1350w,
+                                            ./images/restaurant-354.webp 354w,
+                                            ./images/restaurant-354@2x.webp 708w,
+                                            ./images/restaurant-354@3x.webp 1062w,
+                                            ./images/restaurant-370.webp 370w,
+                                            ./images/restaurant-370@2x.webp 740w,
+                                            ./images/restaurant-370@3x.webp 1110w"
+                                        type="image/webp"
+                                        sizes="(min-width: 1200px) 30.83vw, (min-width: 768px) 46vw, (min-width: 480px) 93vw, 100vw">
+                                    <img
+                                        srcset=
+                                            "./images/restaurant-450.jpg 450w,
+                                            ./images/restaurant-450@2x.jpg 900w,
+                                            ./images/restaurant-450@3x.jpg 1350w,
+                                            ./images/restaurant-354.jpg 354w,
+                                            ./images/restaurant-354@2x.jpg 708w,
+                                            ./images/restaurant-354@3x.jpg 1062w,
+                                            ./images/restaurant-370.jpg 370w,
+                                            ./images/restaurant-370@2x.jpg 740w,
+                                            ./images/restaurant-370@3x.jpg 1110w"
+                                        src="./images/restaurant-370.jpg"
+                                        alt="Логотип ресторана"
+                                        class="portfolio-card__image"
+                                        sizes="(min-width: 1200px) 30.83vw, (min-width: 768px) 46vw, (min-width: 480px) 93vw, 100vw">
+                                </picture>
                                 <p class="portfolio-card__description">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
                                     получить исчерпывающие сведения о компании или частном лице.
@@ -119,7 +235,36 @@
                     <li class="portfolio-card">
                         <a href="" class="portfolio-card__link">
                             <div class="portfolio-card__image-box">
-                                <img src="./images/headphones.jpg" alt="Наушники" width="370" class="portfolio-card__image">
+                                <picture>
+                                    <source
+                                        srcset=
+                                            "./images/headphones-450.webp 450w,
+                                            ./images/headphones-450@2x.webp 900w,
+                                            ./images/headphones-450@3x.webp 1350w,
+                                            ./images/headphones-354.webp 354w,
+                                            ./images/headphones-354@2x.webp 708w,
+                                            ./images/headphones-354@3x.webp 1062w,
+                                            ./images/headphones-370.webp 370w,
+                                            ./images/headphones-370@2x.webp 740w,
+                                            ./images/headphones-370@3x.webp 1110w"
+                                        type="image/webp"
+                                        sizes="(min-width: 1200px) 30.83vw, (min-width: 768px) 46vw, (min-width: 480px) 93vw, 100vw">
+                                    <img
+                                        srcset=
+                                            "./images/headphones-450.jpg 450w,
+                                            ./images/headphones-450@2x.jpg 900w,
+                                            ./images/headphones-450@3x.jpg 1350w,
+                                            ./images/headphones-354.jpg 354w,
+                                            ./images/headphones-354@2x.jpg 708w,
+                                            ./images/headphones-354@3x.jpg 1062w,
+                                            ./images/headphones-370.jpg 370w,
+                                            ./images/headphones-370@2x.jpg 740w,
+                                            ./images/headphones-370@3x.jpg 1110w"
+                                        src="./images/headphones-370.jpg"
+                                        alt="Наушники"
+                                        class="portfolio-card__image"
+                                        sizes="(min-width: 1200px) 30.83vw, (min-width: 768px) 46vw, (min-width: 480px) 93vw, 100vw">
+                                </picture>
                                 <p class="portfolio-card__description">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
                                     получить исчерпывающие сведения о компании или частном лице.
@@ -135,7 +280,36 @@
                     <li class="portfolio-card">
                         <a href="" class="portfolio-card__link">
                             <div class="portfolio-card__image-box">
-                                <img src="./images/boxes.jpg" alt="Две картонных коробки" width="370" class="portfolio-card__image">
+                                <picture>
+                                    <source
+                                        srcset=
+                                            "./images/boxes-450.webp 450w,
+                                            ./images/boxes-450@2x.webp 900w,
+                                            ./images/boxes-450@3x.webp 1350w,
+                                            ./images/boxes-354.webp 354w,
+                                            ./images/boxes-354@2x.webp 708w,
+                                            ./images/boxes-354@3x.webp 1062w,
+                                            ./images/boxes-370.webp 370w,
+                                            ./images/boxes-370@2x.webp 740w,
+                                            ./images/boxes-370@3x.webp 1110w"
+                                        type="image/webp"
+                                        sizes="(min-width: 1200px) 30.83vw, (min-width: 768px) 46vw, (min-width: 480px) 93vw, 100vw">
+                                    <img
+                                        srcset=
+                                            "./images/boxes-450.jpg 450w,
+                                            ./images/boxes-450@2x.jpg 900w,
+                                            ./images/boxes-450@3x.jpg 1350w,
+                                            ./images/boxes-354.jpg 354w,
+                                            ./images/boxes-354@2x.jpg 708w,
+                                            ./images/boxes-354@3x.jpg 1062w,
+                                            ./images/boxes-370.jpg 370w,
+                                            ./images/boxes-370@2x.jpg 740w,
+                                            ./images/boxes-370@3x.jpg 1110w"
+                                        src="./images/boxes-370.jpg"
+                                        alt="Две картонных коробки"
+                                        class="portfolio-card__image"
+                                        sizes="(min-width: 1200px) 30.83vw, (min-width: 768px) 46vw, (min-width: 480px) 93vw, 100vw">
+                                </picture>
                                 <p class="portfolio-card__description">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
                                     получить исчерпывающие сведения о компании или частном лице.
@@ -151,7 +325,36 @@
                     <li class="portfolio-card">
                         <a href="" class="portfolio-card__link">
                             <div class="portfolio-card__image-box">
-                                <img src="./images/monitor.jpg" alt="Монитор" width="370" class="portfolio-card__image">
+                                <picture>
+                                    <source
+                                        srcset=
+                                            "./images/monitor-450.webp 450w,
+                                            ./images/monitor-450@2x.webp 900w,
+                                            ./images/monitor-450@3x.webp 1350w,
+                                            ./images/monitor-354.webp 354w,
+                                            ./images/monitor-354@2x.webp 708w,
+                                            ./images/monitor-354@3x.webp 1062w,
+                                            ./images/monitor-370.webp 370w,
+                                            ./images/monitor-370@2x.webp 740w,
+                                            ./images/monitor-370@3x.webp 1110w"
+                                        type="image/webp"
+                                        sizes="(min-width: 1200px) 30.83vw, (min-width: 768px) 46vw, (min-width: 480px) 93vw, 100vw">
+                                    <img
+                                        srcset=
+                                            "./images/monitor-450.jpg 450w,
+                                            ./images/monitor-450@2x.jpg 900w,
+                                            ./images/monitor-450@3x.jpg 1350w,
+                                            ./images/monitor-354.jpg 354w,
+                                            ./images/monitor-354@2x.jpg 708w,
+                                            ./images/monitor-354@3x.jpg 1062w,
+                                            ./images/monitor-370.jpg 370w,
+                                            ./images/monitor-370@2x.jpg 740w,
+                                            ./images/monitor-370@3x.jpg 1110w"
+                                        src="./images/monitor-370.jpg"
+                                        alt="Монитор"
+                                        class="portfolio-card__image"
+                                        sizes="(min-width: 1200px) 30.83vw, (min-width: 768px) 46vw, (min-width: 480px) 93vw, 100vw">
+                                </picture>
                                 <p class="portfolio-card__description">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
                                     получить исчерпывающие сведения о компании или частном лице.
@@ -167,7 +370,36 @@
                     <li class="portfolio-card">
                         <a href="" class="portfolio-card__link">
                             <div class="portfolio-card__image-box">
-                                <img src="./images/magazine.jpg" alt="Журнал" width="370" class="portfolio-card__image">
+                                <picture>
+                                    <source
+                                        srcset=
+                                            "./images/magazine-450.webp 450w,
+                                            ./images/magazine-450@2x.webp 900w,
+                                            ./images/magazine-450@3x.webp 1350w,
+                                            ./images/magazine-354.webp 354w,
+                                            ./images/magazine-354@2x.webp 708w,
+                                            ./images/magazine-354@3x.webp 1062w,
+                                            ./images/magazine-370.webp 370w,
+                                            ./images/magazine-370@2x.webp 740w,
+                                            ./images/magazine-370@3x.webp 1110w"
+                                        type="image/webp"
+                                        sizes="(min-width: 1200px) 30.83vw, (min-width: 768px) 46vw, (min-width: 480px) 93vw, 100vw">
+                                    <img
+                                        srcset=
+                                            "./images/magazine-450.jpg 450w,
+                                            ./images/magazine-450@2x.jpg 900w,
+                                            ./images/magazine-450@3x.jpg 1350w,
+                                            ./images/magazine-354.jpg 354w,
+                                            ./images/magazine-354@2x.jpg 708w,
+                                            ./images/magazine-354@3x.jpg 1062w,
+                                            ./images/magazine-370.jpg 370w,
+                                            ./images/magazine-370@2x.jpg 740w,
+                                            ./images/magazine-370@3x.jpg 1110w"
+                                        src="./images/magazine-370.jpg"
+                                        alt="Журнал"
+                                        class="portfolio-card__image"
+                                        sizes="(min-width: 1200px) 30.83vw, (min-width: 768px) 46vw, (min-width: 480px) 93vw, 100vw">
+                                </picture>
                                 <p class="portfolio-card__description">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
                                     получить исчерпывающие сведения о компании или частном лице.
@@ -183,7 +415,36 @@
                     <li class="portfolio-card">
                         <a href="" class="portfolio-card__link">
                             <div class="portfolio-card__image-box">
-                                <img src="./images/tag.jpg" alt="Бирка проекта" width="370" class="portfolio-card__image">
+                                <picture>
+                                    <source
+                                        srcset=
+                                            "./images/tag-450.webp 450w,
+                                            ./images/tag-450@2x.webp 900w,
+                                            ./images/tag-450@3x.webp 1350w,
+                                            ./images/tag-354.webp 354w,
+                                            ./images/tag-354@2x.webp 708w,
+                                            ./images/tag-354@3x.webp 1062w,
+                                            ./images/tag-370.webp 370w,
+                                            ./images/tag-370@2x.webp 740w,
+                                            ./images/tag-370@3x.webp 1110w"
+                                        type="image/webp"
+                                        sizes="(min-width: 1200px) 30.83vw, (min-width: 768px) 46vw, (min-width: 480px) 93vw, 100vw">
+                                    <img
+                                        srcset=
+                                            "./images/tag-450.jpg 450w,
+                                            ./images/tag-450@2x.jpg 900w,
+                                            ./images/tag-450@3x.jpg 1350w,
+                                            ./images/tag-354.jpg 354w,
+                                            ./images/tag-354@2x.jpg 708w,
+                                            ./images/tag-354@3x.jpg 1062w,
+                                            ./images/tag-370.jpg 370w,
+                                            ./images/tag-370@2x.jpg 740w,
+                                            ./images/tag-370@3x.jpg 1110w"
+                                        src="./images/tag-370.jpg"
+                                        alt="Бирка проекта"
+                                        class="portfolio-card__image"
+                                        sizes="(min-width: 1200px) 30.83vw, (min-width: 768px) 46vw, (min-width: 480px) 93vw, 100vw">
+                                </picture>
                                 <p class="portfolio-card__description">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
                                     получить исчерпывающие сведения о компании или частном лице.
@@ -199,7 +460,36 @@
                     <li class="portfolio-card">
                         <a href="" class="portfolio-card__link">
                             <div class="portfolio-card__image-box">
-                                <img src="./images/worker.jpg" alt="Работа за ноутбуком" width="370" class="portfolio-card__image">
+                                <picture>
+                                    <source
+                                        srcset=
+                                            "./images/worker-450.webp 450w,
+                                            ./images/worker-450@2x.webp 900w,
+                                            ./images/worker-450@3x.webp 1350w,
+                                            ./images/worker-354.webp 354w,
+                                            ./images/worker-354@2x.webp 708w,
+                                            ./images/worker-354@3x.webp 1062w,
+                                            ./images/worker-370.webp 370w,
+                                            ./images/worker-370@2x.webp 740w,
+                                            ./images/worker-370@3x.webp 1110w"
+                                        type="image/webp"
+                                        sizes="(min-width: 1200px) 30.83vw, (min-width: 768px) 46vw, (min-width: 480px) 93vw, 100vw">
+                                    <img
+                                        srcset=
+                                            "./images/worker-450.jpg 450w,
+                                            ./images/worker-450@2x.jpg 900w,
+                                            ./images/worker-450@3x.jpg 1350w,
+                                            ./images/worker-354.jpg 354w,
+                                            ./images/worker-354@2x.jpg 708w,
+                                            ./images/worker-354@3x.jpg 1062w,
+                                            ./images/worker-370.jpg 370w,
+                                            ./images/worker-370@2x.jpg 740w,
+                                            ./images/worker-370@3x.jpg 1110w"
+                                        src="./images/worker-370.jpg"
+                                        alt="Работа за ноутбуком"
+                                        class="portfolio-card__image"
+                                        sizes="(min-width: 1200px) 30.83vw, (min-width: 768px) 46vw, (min-width: 480px) 93vw, 100vw">
+                                </picture>
                                 <p class="portfolio-card__description">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
                                     получить исчерпывающие сведения о компании или частном лице.
@@ -220,65 +510,68 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer__container">
-            <div class="address">
-                <!-- logo -->
-                <a href="./index.html" lang="en" class="logo-link">Web<span
-                        class="logo-link__text--footer">Studio</span></a>
-                <!-- contacts -->
-                <address id="contacts" class="address__contacts">
-                    <ul class="address__list">
-                        <li class="address__item"><a href="https://goo.gl/maps/YFTjMEW9eGdTmHT36" target="_blank"
-                                rel="noreferrer noopener nofollow" class="address__link">г. Киев, пр-т Леси Украинки, 26</a>
+            <div class="footer__box">
+                <div class="address">
+                    <!-- logo -->
+                    <a href="./index.html" lang="en" class="logo-link logo-link--footer">Web<span
+                            class="logo-link__text--footer">Studio</span></a>
+                    <!-- contacts -->
+                    <address id="contacts" class="address__contacts">
+                        <ul class="address__list">
+                            <li class="address__item"><a href="https://goo.gl/maps/YFTjMEW9eGdTmHT36" target="_blank"
+                                    rel="noreferrer noopener nofollow" class="address__link">г. Киев, пр-т Леси Украинки,
+                                    26</a></li>
+                            <li class="address__item"><a href="mailto:info@devstudio.com"
+                                    class="address__link address__link--transparency">info@devstudio.com</a>
+                            </li>
+                            <li class="address__item"><a href="tel:+380961111111"
+                                    class="address__link address__link--transparency">+38
+                                    096 111 11 11</a></li>
+                        </ul>
+                    </address>
+                </div>
+                <!-- Social links -->
+                <div class="join-links">
+                    <p class="join-links__text">присоединяйтесь</p>
+                    <ul class="social-links">
+                        <li class="social-links__item">
+                            <a href="https://www.instagram.com" target="_blank" rel="noreferrer noopener nofollow"
+                                aria-label="Инстаграм" class="social-links__link social-links__link--footer">
+                                <svg class="social-links__icon" width="20" height="20">
+                                    <use href="./images/icons.svg#icon-instagram"></use>
+                                </svg>
+                                <span class="social-links__descr social-linls__descr--visually-hidden">Инстаграм</span>
+                            </a>
                         </li>
-                        <li class="address__item"><a href="mailto:info@devstudio.com"
-                                class="address__link address__link--transparency">info@devstudio.com</a>
+                        <li class="social-links__item">
+                            <a href="https://twitter.com" target="_blank" rel="noreferrer noopener nofollow"
+                                aria-label="Твиттер" class="social-links__link social-links__link--footer">
+                                <svg class="social-links__icon" width="20" height="20">
+                                    <use href="./images/icons.svg#icon-twitter"></use>
+                                </svg>
+                                <span class="social-links__descr social-linls__descr--visually-hidden">Твиттер</span>
+                            </a>
                         </li>
-                        <li class="address__item"><a href="tel:+380961111111"
-                                class="address__link address__link--transparency">+38 096 111 11 11</a></li>
+                        <li class="social-links__item">
+                            <a href="https://uk-ua.facebook.com" target="_blank" rel="noreferrer noopener nofollow"
+                                aria-label="Фейсбук" class="social-links__link social-links__link--footer">
+                                <svg class="social-links__icon" width="20" height="20">
+                                    <use href="./images/icons.svg#icon-facebook"></use>
+                                </svg>
+                                <span class="social-links__descr social-linls__descr--visually-hidden">Фейсбук</span>
+                            </a>
+                        </li>
+                        <li class="social-links__item">
+                            <a href="https://ua.linkedin.com/" target="_blank" rel="noreferrer noopener nofollow"
+                                aria-label="Линкедин" class="social-links__link social-links__link--footer">
+                                <svg class="social-links__icon" width="20" height="20">
+                                    <use href="./images/icons.svg#icon-linkedin"></use>
+                                </svg>
+                                <span class="social-links__descr social-linls__descr--visually-hidden">Линкедин</span>
+                            </a>
+                        </li>
                     </ul>
-                </address>
-            </div>
-            <!-- Social links -->
-            <div class="join-links">
-                <p class="join-links__text">присоединяйтесь</p>
-                <ul class="social-links">
-                    <li class="social-links__item">
-                        <a href="https://www.instagram.com" target="_blank" rel="noreferrer noopener nofollow"
-                            aria-label="Инстаграм" class="social-links__link social-links__link--footer">
-                            <svg class="social-links__icon" width="20" height="20">
-                                <use href="./images/icons.svg#icon-instagram"></use>
-                            </svg>
-                            <span class="social-links__descr social-linls__descr--visually-hidden">Инстаграм</span>
-                        </a>
-                    </li>
-                    <li class="social-links__item">
-                        <a href="https://twitter.com" target="_blank" rel="noreferrer noopener nofollow"
-                            aria-label="Твиттер" class="social-links__link social-links__link--footer">
-                            <svg class="social-links__icon" width="20" height="20">
-                                <use href="./images/icons.svg#icon-twitter"></use>
-                            </svg>
-                            <span class="social-links__descr social-linls__descr--visually-hidden">Твиттер</span>
-                        </a>
-                    </li>
-                    <li class="social-links__item">
-                        <a href="https://uk-ua.facebook.com" target="_blank" rel="noreferrer noopener nofollow"
-                            aria-label="Фейсбук" class="social-links__link social-links__link--footer">
-                            <svg class="social-links__icon" width="20" height="20">
-                                <use href="./images/icons.svg#icon-facebook"></use>
-                            </svg>
-                            <span class="social-links__descr social-linls__descr--visually-hidden">Фейсбук</span>
-                        </a>
-                    </li>
-                    <li class="social-links__item">
-                        <a href="https://ua.linkedin.com/" target="_blank" rel="noreferrer noopener nofollow"
-                            aria-label="Линкедин" class="social-links__link social-links__link--footer">
-                            <svg class="social-links__icon" width="20" height="20">
-                                <use href="./images/icons.svg#icon-linkedin"></use>
-                            </svg>
-                            <span class="social-links__descr social-linls__descr--visually-hidden">Линкедин</span>
-                        </a>
-                    </li>
-                </ul>
+                </div>
             </div>
             <!-- Mailing list -->
             <form class="mailing-form">
@@ -297,6 +590,7 @@
     </footer>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

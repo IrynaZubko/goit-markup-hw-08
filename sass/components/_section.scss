@@ -1,5 +1,9 @@
 .section {
     @include section;
+
+    @media screen and (min-width: $desktop) {
+        @include section($top: 94px, $bottom: 94px);
+    }
 }
 
 .section__title {
@@ -12,6 +16,14 @@
 
 .section--padding-top-removed {
     @include section($top: 0);
+}
+
+.section--hidden {
+    display: none;
+
+    @media screen and (min-width: $desktop) {
+        display: block;
+    }
 }
 
 .section--accent {

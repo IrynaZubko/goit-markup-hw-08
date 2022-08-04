@@ -8,6 +8,10 @@ body {
 
     font-family: 'Roboto', sans-serif;
     letter-spacing: getLetterSpacing('main');
+
+    &.modal--open {
+        overflow: hidden;
+    }
 }
 
 h1,

@@ -1,12 +1,27 @@
 .buttons-list {
-    @include centeredFlex;
+    display: flex;
+    flex-wrap: wrap;
     @extend %list;
-    margin-bottom: 50px;
+
+    margin-bottom: 25px;
+
+    @media screen and (min-width: $tablet) {
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 50px;
+    }
 }
 
 .buttons-list__item {
     &:not(:last-child) {
         margin-right: 8px;
+    }
+
+    @media screen and (max-width: ($tablet - 1px)) {
+        margin-bottom: 15px;
     }
 }
 

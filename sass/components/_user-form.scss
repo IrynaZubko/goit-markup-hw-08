@@ -1,5 +1,5 @@
 .user-form {
-    width: 448px;
+    width: 100%;
 }
 
 .user-form__title {
@@ -7,10 +7,14 @@
 
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
     text-align: center;
 
     color: getColor('text-accent');
+
+    @media screen and (min-width: $desktop) {
+        line-height: 1.15;
+    }
 }
 
 .user-form__field {

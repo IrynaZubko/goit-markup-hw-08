@@ -1,10 +1,10 @@
-@mixin section($top: 94px, $bottom: 94px) {
+@mixin section($top: 60px, $bottom: 60px) {
     padding-top: $top;
     padding-bottom: $bottom;
 }
 
-@mixin centeredFlex($type: flex) {
+@mixin centeredFlex($type: flex, $justify-content: center) {
     display: $type;
     align-items: center;
-    justify-content: center;
+    justify-content: $justify-content;
 }

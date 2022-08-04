@@ -1,24 +1,79 @@
 .contacts-list {
     @extend %list;
-    display: flex;
-    margin-left: auto;
+
+    @media screen and (max-width: calc($tablet - 1px)) {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: auto;
+    }
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+    }
 }
 
 .contacts-list__item {
     @extend %header-items;
+    font-size: 24px;
+    line-height: 1.17;
 
-    &:last-child {
-        margin-right: 0;
+    @media screen and (max-width: calc($tablet - 1px)) {
+        &:first-child {
+            margin-bottom: 64px;
+        }
+
+        &:last-child {
+            margin-bottom: 32px;
+        }
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
+        font-size: 12px;
+        line-height: 1.14;
+        
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    @media screen and (min-width: $desktop) {
+        font-size: 14px;
+        line-height: 1.14;
+        
+        &:not(:last-child) {
+            margin-right: 50px;
+        }
+    }
+}
+
+.contacts-list__item--active {
+    @media screen and (max-width: calc($tablet - 1px)) {
+        font-size: 34px;
+        line-height: 1.18;
+        color: getColor('button');
     }
 }
 
 .contacts-list__link {
     @extend %link;
-    @include centeredFlex;
-    padding: 32px 0;
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        align-items: center;
+    }
+
+    @media screen and (min-width: $desktop) {
+        @include centeredFlex;
+        padding: 32px 0;
+    }
 }
 
 .contacts-list__icon {
-    margin-right: 10px;
-    fill: currentColor;
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        margin-right: 10px;
+        fill: currentColor;
+    }
 }

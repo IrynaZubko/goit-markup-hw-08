@@ -1,14 +1,35 @@
 .regular-costumers-list {
-    @include centeredFlex;
     @extend %list;
+    @include centeredFlex;
+
+    @media screen and (max-width: calc($desktop - 1px)) {
+        flex-wrap: wrap;
+
+        $margin: 30px;
+        margin-left: -$margin;
+        margin-top: -$margin;
+    }
 }
 
 .regular-costumers-list__item {
-    width: 170px;
     height: 92px;
 
-    &:not(:last-child) {
-        margin-right: 30px;
+    $margin: 30px;
+    flex-basis: calc((100% - $margin * 2) / 2);
+
+    margin-left: $margin;
+    margin-top: $margin;
+
+    @media screen and (min-width: $tablet) {
+        flex-basis: calc((100% - $margin * 3) / 3);
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 170px;
+    
+        &:not(:last-child) {
+            margin-right: $margin;
+        }
     }
 }
 
@@ -29,6 +50,7 @@
     &:focus {
         color: getColor('button');
         border-color: getColor('button');
+        outline: 0px solid getColor('primary-white');
     }
 }
 

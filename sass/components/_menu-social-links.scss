@@ -1,0 +1,30 @@
+.menu-social-links {
+    display: flex;
+    flex-wrap: wrap;
+    @extend %list;
+
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+}
+
+.menu-social-links__item {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: getLetterSpacing('accent');
+    color: getColor('button');
+
+    &:not(:last-child) {
+        padding-right: 10px;
+        border-right: 1px solid rgba(33, 33, 33, 0.2);;
+    }
+
+    &:not(:first-child) {
+        padding-left: 10px;
+    }
+}
+
+.menu-social-links__link {
+    @extend %link;
+}

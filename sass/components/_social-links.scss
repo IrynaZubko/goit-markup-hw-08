@@ -29,6 +29,7 @@
     &:focus {
         color: getColor('primary-white');
         background-color: getColor('button');
+        outline: 0px solid getColor('primary-white');
     }
 }
 

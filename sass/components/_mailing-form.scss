@@ -1,5 +1,11 @@
 .mailing-form {
-    margin-left: auto;
+    @media screen and (max-width: calc($desktop - 1px)) {
+        text-align: center;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-left: auto;
+    }
 }
 
 .mailing-form__label {
@@ -7,14 +13,15 @@
 }
 
 .mailing-form__send-block {
-    display: flex;
-    flex-direction: row;
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 .mailing-form__input {
     padding: 0 0 0 16px;
-    margin-right: 12px;
-    width: 358px;
+    width: 100%;
     height: 50px;
 
     color: getColor('primary-white');
@@ -37,5 +44,18 @@
 
     &::placeholder {
         color: getColor('contacts');
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
+        width: 450px;
+    }
+
+    @media screen and (max-width: calc($desktop - 1px)) {
+        margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-right: 12px;
+        width: 358px;
     }
 }

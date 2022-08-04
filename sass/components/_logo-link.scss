@@ -1,0 +1,30 @@
+.logo-link {
+    @extend %link;
+    display: block;
+    color: getColor('button');
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.17;
+
+    // @media screen and (min-width: $tablet) {
+    
+    // }
+
+    @media screen and (min-width: $desktop) {
+        font-size: 26px;
+        line-height: 1.19;
+    }
+}
+
+.logo-link--footer {
+    margin-bottom: 20px;
+}
+
+.logo-link__text {
+    color: getColor('logo');
+}
+
+.logo-link__text--footer {
+    color: getColor('primary-white');
+}
