@@ -39,6 +39,10 @@
 }
 
 .portfolio-card__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
     text-decoration: none;
     color: inherit;
     transition: box-shadow $duration $cubic-bezier;
@@ -82,7 +86,7 @@
 }
 
 .portfolio-card__content-box {
-    flex-basis: 100%;
+    flex-grow: 1;
     padding: 20px 24px;
 
     border-width: 1px;
@@ -91,6 +95,10 @@
     border-top: none;
 
     background: getColor('primary-white');
+
+    .portfolio-card__link:hover & {
+        border-color: transparent;
+    }
 }
 
 .portfolio-card__title {

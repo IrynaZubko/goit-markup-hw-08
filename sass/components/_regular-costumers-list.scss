@@ -17,8 +17,10 @@
     $margin: 30px;
     flex-basis: calc((100% - $margin * 2) / 2);
 
-    margin-left: $margin;
-    margin-top: $margin;
+    @media screen and (max-width: calc($desktop - 1px)) {
+        margin-left: $margin;
+        margin-top: $margin;
+    }
 
     @media screen and (min-width: $tablet) {
         flex-basis: calc((100% - $margin * 3) / 3);
